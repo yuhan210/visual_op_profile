@@ -54,7 +54,8 @@ def getFrameDiff(prev_frame, cur_frame):
 
 if __name__ == "__main__":
 
-    video_path = '/home/ubuntu/ffmpeg/doc/examples/14_year_old_girl_playing_guitar_cover_van_halen__eruption_solo_hd_best_quality_fDTm1IzQf-U.mp4'
+    #video_path = '/home/ubuntu/ffmpeg/doc/examples/14_year_old_girl_playing_guitar_cover_van_halen__eruption_solo_hd_best_quality_fDTm1IzQf-U.mp4'
+    video_path = '___16___1mygnewmpznkw.mp4'
     cap = cv2.VideoCapture(video_path)
 
     counter = 0
@@ -66,7 +67,7 @@ if __name__ == "__main__":
         ret, frame = cap.read()
         if frame == None or frame.size == 0:
             break
-        #print frame.shape
+        print frame.shape
         tic = time.time()
         frame = cv2.resize(frame, (160, 120)) 
         toc = time.time()
